@@ -1,6 +1,6 @@
-package bgu.spl.mics.application.services;
+package java.bgu.spl.mics.application.services;
 
-import bgu.spl.mics.MicroService;
+import java.bgu.spl.mics.MicroService;
 
 /**
  * R2D2Microservices is in charge of the handling {@link DeactivationEvent}.

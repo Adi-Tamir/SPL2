@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package java.bgu.spl.mics;
 
 /**
  * The message-bus is a shared object used for communication between

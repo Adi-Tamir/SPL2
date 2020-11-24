@@ -1,9 +1,11 @@
-package bgu.spl.mics.application.services;
+package java.bgu.spl.mics.application.services;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import bgu.spl.mics.MicroService;
+import java.bgu.spl.mics.MicroService;
+import java.bgu.spl.mics.application.passiveObjects.Attack;
+import java.bgu.spl.mics.application.messages.AttackEvent;
 
 /**
  * LeiaMicroservices Initialized with Attack objects, and sends them as  {@link AttackEvents}.

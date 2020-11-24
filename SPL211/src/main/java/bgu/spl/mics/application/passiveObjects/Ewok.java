@@ -1,4 +1,4 @@
-package bgu.spl.mics.application.passiveObjects;
+package java.bgu.spl.mics.application.passiveObjects;
 
 /**
  * Passive data-object representing a forest creature summoned when HanSolo and C3PO receive AttackEvents.

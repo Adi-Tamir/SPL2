@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package java.bgu.spl.mics;
 
 /**
  * The MicroService is an abstract class that any micro-service in the system
@@ -7,11 +7,11 @@ package bgu.spl.mics;
  * <p>
  * Derived classes of MicroService should never directly touch the message-bus.
  * Instead, they have a set of internal protected wrapping methods (e.g.,
- * {@link #sendBroadcast(bgu.spl.mics.Broadcast)}, {@link #sendBroadcast(bgu.spl.mics.Broadcast)},
+ * {@link #sendBroadcast(java.bgu.spl.mics.Broadcast)}, {@link #sendBroadcast(java.bgu.spl.mics.Broadcast)},
  * etc.) they can use. When subscribing to message-types,
  * the derived class also supplies a {@link Callback} that should be called when
  * a message of the subscribed type was taken from the micro-service
- * message-queue (see {@link MessageBus#register(bgu.spl.mics.MicroService)}
+ * message-queue (see {@link MessageBus#register(java.bgu.spl.mics.MicroService)}
  * method). The abstract MicroService stores this callback together with the
  * type of the message is related to.
  * 
@@ -19,14 +19,15 @@ package bgu.spl.mics;
  * <p>
  */
 public abstract class MicroService implements Runnable { 
-    
+
+    private String name;
 
     /**
      * @param name the micro-service name (used mainly for debugging purposes -
      *             does not have to be unique)
      */
     public MicroService(String name) {
-    	
+    	this.name = name;
     }
 
     /**

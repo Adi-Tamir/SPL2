@@ -1,7 +1,7 @@
-package bgu.spl.mics.application.services;
+package java.bgu.spl.mics.application.services;
 
 
-import bgu.spl.mics.MicroService;
+import java.bgu.spl.mics.MicroService;
 
 /**
  * HanSoloMicroservices is in charge of the handling {@link AttackEvents}.

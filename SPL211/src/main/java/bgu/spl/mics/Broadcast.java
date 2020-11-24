@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package java.bgu.spl.mics;
 
 /**
  * A "Marker" interface extending {@link Message}. When sending a Broadcast message

@@ -1,4 +1,4 @@
-package bgu.spl.mics;
+package java.bgu.spl.mics;
 
 /**
  * The {@link MessageBusImpl class is the implementation of the MessageBus interface.

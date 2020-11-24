@@ -1,4 +1,4 @@
-package bgu.spl.mics.application;
+package java.bgu.spl.mics.application;
 
 /** This is the Main class of the application. You should parse the input file, 
  * create the different components of the application, and run the system.

@@ -1,4 +1,4 @@
-package bgu.spl.mics.application.passiveObjects;
+package java.bgu.spl.mics.application.passiveObjects;
 
 import java.util.List;
 

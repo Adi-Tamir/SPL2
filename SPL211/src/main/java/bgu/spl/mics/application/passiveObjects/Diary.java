@@ -9,4 +9,14 @@ package java.bgu.spl.mics.application.passiveObjects;
  */
 public class Diary {
 
+    String recording;
+
+    public Diary(){
+        recording = "";
+    }
+
+    public String getRecording(){return recording;}
+
+    public void setRecording(String recording){this.recording = this.recording + "\n" + recording;}
+
 }

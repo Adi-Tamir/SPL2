@@ -24,4 +24,6 @@ public class Ewok {
     public void release() {
     	
     }
+
+    public boolean getAvailable(){ return available;}
 }

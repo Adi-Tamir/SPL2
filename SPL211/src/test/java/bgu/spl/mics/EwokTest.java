@@ -7,6 +7,7 @@ import org.junit.jupiter.api.AfterAll;
 
 import org.junit.jupiter.api.Test;
 
+import java.bgu.spl.mics.application.passiveObjects.Ewok;
 import java.util.concurrent.TimeUnit;
 
 
@@ -21,6 +22,6 @@ public class EwokTest {
         ewok = new Ewok();
     }
 
-    @Test
+
 
 }

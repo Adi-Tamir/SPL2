@@ -19,7 +19,6 @@ public class Future<T> {
 	 */
 	public Future() {
 		isDone = false;
-		//result = null;
 	}
 	
 	/**
@@ -67,11 +66,11 @@ public class Future<T> {
      *         elapsed, return null.
      */
 	public T get(long timeout, TimeUnit unit) {
-		if(!isDone()) {
+		//for(int i = 0; i < timeout && !isDone(); i++) {
 			try {
 				wait(unit.toSeconds(timeout));
 			} catch (Exception e) { }
-		}
+		//}
 		if(isDone)
 			return result;
         return null;

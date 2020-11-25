@@ -1,5 +1,7 @@
 package java.bgu.spl.mics.application.services;
 
+import java.bgu.spl.mics.Callback;
+import java.bgu.spl.mics.Event;
 import java.bgu.spl.mics.MicroService;
 import java.bgu.spl.mics.application.messages.AttackEvent;
 
@@ -21,4 +23,6 @@ public class C3POMicroservice extends MicroService {
     protected void initialize() {
 
     }
+
+
 }

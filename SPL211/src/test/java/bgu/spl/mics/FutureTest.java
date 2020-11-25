@@ -23,6 +23,9 @@ public class FutureTest {
         future = new Future<>();
     }
 
+    @AfterAll
+    public void teardown(){ future = new Future<>();}
+
     @Test
     public void testResolve(){
         String str = "someResult";

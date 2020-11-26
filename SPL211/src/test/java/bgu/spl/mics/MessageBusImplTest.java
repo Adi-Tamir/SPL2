@@ -1,4 +1,4 @@
-package test;
+package test.java.bgu.spl.mics;
 
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;

@@ -24,7 +24,7 @@ import java.util.Queue;
 public abstract class MicroService implements Runnable { 
 
     private String name;
-    private Queue<Message> eventQueue;
+
     private MessageBusImpl messageBus;
 
     /**
@@ -33,8 +33,9 @@ public abstract class MicroService implements Runnable {
      */
     public MicroService(String name) {
         this.name = name;
-        this.eventQueue = new PriorityQueue<Message>();
+
         this.messageBus = messageBus.getInstance();
+
     }
 
     /**
@@ -100,8 +101,8 @@ public abstract class MicroService implements Runnable {
      * 	       			null in case no micro-service has subscribed to {@code e.getClass()}.
      */
     protected final <T> Future<T> sendEvent(Event<T> e) {
-    	
-        return null; 
+    	return messageBus.sendEvent(e);
+        //return null;
     }
 
     /**
@@ -111,7 +112,7 @@ public abstract class MicroService implements Runnable {
      * @param b The broadcast message to send
      */
     protected final void sendBroadcast(Broadcast b) {
-    	
+    	messageBus.sendBroadcast(b);
     }
 
     /**
@@ -125,7 +126,7 @@ public abstract class MicroService implements Runnable {
      *               {@code e}.
      */
     protected final <T> void complete(Event<T> e, T result) {
-    	
+    	messageBus.complete(e, result);
     }
 
     /**
@@ -155,7 +156,16 @@ public abstract class MicroService implements Runnable {
      */
     @Override
     public final void run() {
-    	
+        messageBus.register(this);
+    	initialize();
+       //????
+        try {
+            Message m = messageBus.awaitMessage(this);
+        } catch (InterruptedException e) {
+            //??????????????????????;
+        }
+
+        messageBus.unregister(this);
     }
 
 }

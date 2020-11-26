@@ -7,7 +7,7 @@ import org.junit.jupiter.api.AfterAll;
 
 import org.junit.jupiter.api.Test;
 
-import java.bgu.spl.mics.MessageBusImpl;
+import java.bgu.spl.mics.*;
 import java.util.concurrent.TimeUnit;
 
 
@@ -18,10 +18,53 @@ public class MessageBusTest {
     private MessageBusImpl messageBus;
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         messageBus = messageBus.getInstance();
     }
 
+    @AfterAll
+    public void tearDown() {
+        messageBus = messageBus.getInstance();
+    }
+
+    @Test
+    public void testSubscribeEvent() {
+
+    }
+
+    @Test
+    public void testSubscribeBroadcast() {
+
+    }
+
+    @Test
+    public void testComplete() {
+
+    }
+
+    @Test
+    public void testSendBroadcast() {
+
+    }
 
 
+    @Test
+    public void testSendEvent() {
+
+    }
+
+    @Test
+    public void testRegister() {
+
+    }
+
+    @Test
+    public void testUnregister() {
+
+    }
+
+    @Test
+    public void testAwaitMessage() {
+
+    }
 }
